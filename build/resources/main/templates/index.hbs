@@ -1,0 +1,16 @@
+
+{{#partial "content"}}
+    {{#if username}}
+        <h1>welcome {{username}}</h1>
+
+        <p>View <a href="/ideas"> all course ideas</a></p>
+    {{ else }}
+        <h1>Welcome!</h1>
+        <form action="/sign-in" method="post">
+            <input type="text" placeholder="What is your userName?" name="username">
+            <button> Sign up </button>
+        </form>
+    {{/if}}
+{{/partial}}
+
+{{> base.hbs}}
